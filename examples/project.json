@@ -1,0 +1,89 @@
+{
+  "schema": "kitwright-project-v1",
+  "title": "Workshop welcome kits",
+  "notes": "Fictional whole-count supplies. Outside-plan reserves are manual counts, not live reservations. This plan does not change stock.",
+  "parts": [
+    {
+      "id": "cards",
+      "code": "CARD",
+      "name": "Activity card",
+      "stock": 20,
+      "reserved": 2,
+      "location": "Drawer A"
+    },
+    {
+      "id": "bags",
+      "code": "BAG",
+      "name": "Paper bag",
+      "stock": 10,
+      "reserved": 1,
+      "location": "Shelf B"
+    },
+    {
+      "id": "stickers",
+      "code": "STICKER",
+      "name": "Sticker",
+      "stock": 15,
+      "reserved": 0,
+      "location": "Drawer A"
+    },
+    {
+      "id": "ribbon",
+      "code": "RIBBON",
+      "name": "Precut ribbon piece",
+      "stock": 7,
+      "reserved": 0,
+      "location": "Shelf C"
+    }
+  ],
+  "kits": [
+    {
+      "id": "starter",
+      "name": "Starter kit",
+      "quantity": 6
+    },
+    {
+      "id": "mini",
+      "name": "Mini kit",
+      "quantity": 5
+    }
+  ],
+  "lines": [
+    {
+      "id": "l1",
+      "kitId": "starter",
+      "partId": "cards",
+      "units": 2
+    },
+    {
+      "id": "l2",
+      "kitId": "starter",
+      "partId": "bags",
+      "units": 1
+    },
+    {
+      "id": "l3",
+      "kitId": "starter",
+      "partId": "stickers",
+      "units": 1
+    },
+    {
+      "id": "l4",
+      "kitId": "mini",
+      "partId": "cards",
+      "units": 1
+    },
+    {
+      "id": "l5",
+      "kitId": "mini",
+      "partId": "bags",
+      "units": 1
+    },
+    {
+      "id": "l6",
+      "kitId": "mini",
+      "partId": "stickers",
+      "units": 2
+    }
+  ]
+}

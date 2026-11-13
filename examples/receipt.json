@@ -1,0 +1,312 @@
+{
+  "schema": "kitwright-receipt-v1",
+  "project": {
+    "schema": "kitwright-project-v1",
+    "title": "Workshop welcome kits",
+    "notes": "Fictional whole-count supplies. Outside-plan reserves are manual counts, not live reservations. This plan does not change stock.",
+    "parts": [
+      {
+        "id": "cards",
+        "code": "CARD",
+        "name": "Activity card",
+        "stock": 20,
+        "reserved": 2,
+        "location": "Drawer A"
+      },
+      {
+        "id": "bags",
+        "code": "BAG",
+        "name": "Paper bag",
+        "stock": 10,
+        "reserved": 1,
+        "location": "Shelf B"
+      },
+      {
+        "id": "stickers",
+        "code": "STICKER",
+        "name": "Sticker",
+        "stock": 15,
+        "reserved": 0,
+        "location": "Drawer A"
+      },
+      {
+        "id": "ribbon",
+        "code": "RIBBON",
+        "name": "Precut ribbon piece",
+        "stock": 7,
+        "reserved": 0,
+        "location": "Shelf C"
+      }
+    ],
+    "kits": [
+      {
+        "id": "starter",
+        "name": "Starter kit",
+        "quantity": 6
+      },
+      {
+        "id": "mini",
+        "name": "Mini kit",
+        "quantity": 5
+      }
+    ],
+    "lines": [
+      {
+        "id": "l1",
+        "kitId": "starter",
+        "partId": "cards",
+        "units": 2
+      },
+      {
+        "id": "l2",
+        "kitId": "starter",
+        "partId": "bags",
+        "units": 1
+      },
+      {
+        "id": "l3",
+        "kitId": "starter",
+        "partId": "stickers",
+        "units": 1
+      },
+      {
+        "id": "l4",
+        "kitId": "mini",
+        "partId": "cards",
+        "units": 1
+      },
+      {
+        "id": "l5",
+        "kitId": "mini",
+        "partId": "bags",
+        "units": 1
+      },
+      {
+        "id": "l6",
+        "kitId": "mini",
+        "partId": "stickers",
+        "units": 2
+      }
+    ]
+  },
+  "scope": "Manual whole-count snapshot only. Combined plan demand shares the same stock. Standalone capacities each assume exclusive use of all available stock and cannot be added together. No stock is consumed or reserved by this report.",
+  "stats": {
+    "parts": 4,
+    "kits": 2,
+    "plannedKits": 11,
+    "shortPartTypes": 2,
+    "planCovered": false
+  },
+  "components": [
+    {
+      "id": "cards",
+      "code": "CARD",
+      "name": "Activity card",
+      "stock": 20,
+      "reserved": 2,
+      "location": "Drawer A",
+      "available": 18,
+      "needed": 17,
+      "usedFromAvailable": 17,
+      "shortage": 0,
+      "remaining": 1,
+      "status": "covered",
+      "lineIds": [
+        "l1",
+        "l4"
+      ]
+    },
+    {
+      "id": "bags",
+      "code": "BAG",
+      "name": "Paper bag",
+      "stock": 10,
+      "reserved": 1,
+      "location": "Shelf B",
+      "available": 9,
+      "needed": 11,
+      "usedFromAvailable": 9,
+      "shortage": 2,
+      "remaining": 0,
+      "status": "short",
+      "lineIds": [
+        "l2",
+        "l5"
+      ]
+    },
+    {
+      "id": "stickers",
+      "code": "STICKER",
+      "name": "Sticker",
+      "stock": 15,
+      "reserved": 0,
+      "location": "Drawer A",
+      "available": 15,
+      "needed": 16,
+      "usedFromAvailable": 15,
+      "shortage": 1,
+      "remaining": 0,
+      "status": "short",
+      "lineIds": [
+        "l3",
+        "l6"
+      ]
+    },
+    {
+      "id": "ribbon",
+      "code": "RIBBON",
+      "name": "Precut ribbon piece",
+      "stock": 7,
+      "reserved": 0,
+      "location": "Shelf C",
+      "available": 7,
+      "needed": 0,
+      "usedFromAvailable": 0,
+      "shortage": 0,
+      "remaining": 7,
+      "status": "not-planned",
+      "lineIds": []
+    }
+  ],
+  "kits": [
+    {
+      "id": "starter",
+      "name": "Starter kit",
+      "quantity": 6,
+      "standaloneCapacity": 9,
+      "limitingParts": [
+        "cards",
+        "bags"
+      ],
+      "capacities": [
+        {
+          "lineId": "l1",
+          "partId": "cards",
+          "code": "CARD",
+          "available": 18,
+          "unitsPerKit": 2,
+          "capacity": 9
+        },
+        {
+          "lineId": "l2",
+          "partId": "bags",
+          "code": "BAG",
+          "available": 9,
+          "unitsPerKit": 1,
+          "capacity": 9
+        },
+        {
+          "lineId": "l3",
+          "partId": "stickers",
+          "code": "STICKER",
+          "available": 15,
+          "unitsPerKit": 1,
+          "capacity": 15
+        }
+      ]
+    },
+    {
+      "id": "mini",
+      "name": "Mini kit",
+      "quantity": 5,
+      "standaloneCapacity": 7,
+      "limitingParts": [
+        "stickers"
+      ],
+      "capacities": [
+        {
+          "lineId": "l4",
+          "partId": "cards",
+          "code": "CARD",
+          "available": 18,
+          "unitsPerKit": 1,
+          "capacity": 18
+        },
+        {
+          "lineId": "l5",
+          "partId": "bags",
+          "code": "BAG",
+          "available": 9,
+          "unitsPerKit": 1,
+          "capacity": 9
+        },
+        {
+          "lineId": "l6",
+          "partId": "stickers",
+          "code": "STICKER",
+          "available": 15,
+          "unitsPerKit": 2,
+          "capacity": 7
+        }
+      ]
+    }
+  ],
+  "contributions": [
+    {
+      "lineId": "l1",
+      "kitId": "starter",
+      "kit": "Starter kit",
+      "plannedKits": 6,
+      "partId": "cards",
+      "code": "CARD",
+      "part": "Activity card",
+      "unitsPerKit": 2,
+      "needed": 12
+    },
+    {
+      "lineId": "l2",
+      "kitId": "starter",
+      "kit": "Starter kit",
+      "plannedKits": 6,
+      "partId": "bags",
+      "code": "BAG",
+      "part": "Paper bag",
+      "unitsPerKit": 1,
+      "needed": 6
+    },
+    {
+      "lineId": "l3",
+      "kitId": "starter",
+      "kit": "Starter kit",
+      "plannedKits": 6,
+      "partId": "stickers",
+      "code": "STICKER",
+      "part": "Sticker",
+      "unitsPerKit": 1,
+      "needed": 6
+    },
+    {
+      "lineId": "l4",
+      "kitId": "mini",
+      "kit": "Mini kit",
+      "plannedKits": 5,
+      "partId": "cards",
+      "code": "CARD",
+      "part": "Activity card",
+      "unitsPerKit": 1,
+      "needed": 5
+    },
+    {
+      "lineId": "l5",
+      "kitId": "mini",
+      "kit": "Mini kit",
+      "plannedKits": 5,
+      "partId": "bags",
+      "code": "BAG",
+      "part": "Paper bag",
+      "unitsPerKit": 1,
+      "needed": 5
+    },
+    {
+      "lineId": "l6",
+      "kitId": "mini",
+      "kit": "Mini kit",
+      "plannedKits": 5,
+      "partId": "stickers",
+      "code": "STICKER",
+      "part": "Sticker",
+      "unitsPerKit": 2,
+      "needed": 10
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+Code,Part,Location,On hand,Outside-plan reserve,Available,Combined need,Shortage,Unreserved remaining
+CARD,Activity card,Drawer A,20,2,18,17,0,1
+BAG,Paper bag,Shelf B,10,1,9,11,2,0
+STICKER,Sticker,Drawer A,15,0,15,16,1,0
+RIBBON,Precut ribbon piece,Shelf C,7,0,7,0,0,7
