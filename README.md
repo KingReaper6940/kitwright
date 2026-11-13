@@ -2,6 +2,8 @@
 
 **Know what the whole plan needs.**
 
+[Open Kitwright](https://kitwright-three.vercel.app) · [Automated checks](https://github.com/KingReaper6940/kitwright/actions/workflows/checks.yml)
+
 Check several kit targets against one manual stock snapshot. Kitwright combines demand for shared components before it calculates shortages, so the same bag, card or part is not counted as available to every kit.
 
 ![Actual generated summary of the fictional workshop plan](examples/summary.svg)
